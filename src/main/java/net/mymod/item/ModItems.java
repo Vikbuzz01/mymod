@@ -14,8 +14,8 @@ import net.mymod.MyMod;
 import java.util.function.Function;
 
 public class ModItems {
-    public static final Item XYNOR = registerItem("fluorite", Item::new);
-    public static final Item RAW_XYNOR = registerItem("raw_fluorite", Item::new);
+    public static final Item XYNOR = registerItem("xynor", Item::new);
+    public static final Item RAW_XYNOR = registerItem("raw_xynor", Item::new);
 
 
 
