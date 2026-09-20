@@ -8,6 +8,8 @@ import net.mymod.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static net.mymod.item.ModItems.registerModItems;
+
 public class MyMod implements ModInitializer {
 
 	public static final String MOD_ID = "mymod";
@@ -15,7 +17,7 @@ public class MyMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModItems.registerModItems();
+		registerModItems();
 
 		LOGGER.info("Hello Fabric!");
 	}
