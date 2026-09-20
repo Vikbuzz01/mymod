@@ -14,19 +14,22 @@ import net.mymod.MyMod;
 import java.util.function.Function;
 
 public class ModItems {
-    private static String name;
-    public static final Item FLUORITE = registerModItem(name = "fluorite", Item::new);
+    public static final Item XYNOR = registerItem("fluorite", Item::new);
+    public static final Item RAW_XYNOR = registerItem("raw_fluorite", Item::new);
 
-    private static Item registerModItem(String name, Function<Item.Properties, Item> function) {
+
+
+    private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(MyMod.MOD_ID, name),
                 function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MyMod.MOD_ID, name)))));
     }
 
     public static void registerModItems() {
-        MyMod.LOGGER.info("Registering ModItems for"+ MyMod.MOD_ID);
+        MyMod.LOGGER.info("Registering Mod Items for " + MyMod.MOD_ID);
 
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(output->{
-            output.accept(FLUORITE);
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(output -> {
+            output.accept(XYNOR);
+            output.accept(RAW_XYNOR);
         });
     }
 }
