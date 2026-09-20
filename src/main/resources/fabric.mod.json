@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "mymod",
+	"version": "${version}",
+	"name": "My Mod",
+	"description": "This is a simplistic Minecraft mod made for Project based learning experience",
+	"authors": [
+		"Vikbuzz"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/mymod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.mymod.MyMod"
+		],
+		"fabric-datagen": [
+			"net.mymod.MyModDataGenerator"
+		]
+	},
+	"mixins": [
+		"mymod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
